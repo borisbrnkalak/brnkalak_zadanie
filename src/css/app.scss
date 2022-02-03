@@ -1,0 +1,71 @@
+header {
+  width: 100%;
+  margin-bottom: 0.7em;
+  background: #fff;
+  &.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em 4em;
+  }
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+}
+
+.main-header .links {
+  display: flex;
+  gap: 1.5em;
+  padding-left: 0;
+}
+
+.main-header .links li {
+  list-style: none;
+  padding: 1em 0.8em;
+  border-radius: 4px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.main-header .links li a {
+  text-decoration: none;
+  color: $normal-text-color;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: 0.5s;
+}
+
+.main-header .links i {
+  margin-left: 0.5em;
+  font-size: 1.2em;
+  color: $yellow-color;
+}
+
+.main-header .links li:hover {
+  background-color: $hover-color;
+}
+
+.main-header .links li:hover a {
+  color: $hover-text-color;
+}
+
+.main-header .login-btns {
+  display: flex;
+  gap: 1em;
+}
+
+.login-btns .register .content {
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.main-container {
+  background: $background-color;
+}
