@@ -4,12 +4,7 @@
       <div class="container">
         <Header />
 
-        <p class="bg-yellow">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, alias!
-          Tempora aspernatur dicta molestias porro dolorum veniam officiis
-          praesentium aut temporibus? Laudantium, laboriosam placeat dolorum at
-          est ipsum optio nihil!
-        </p>
+        <PageContent />
       </div>
     </q-page-container>
   </q-layout>
@@ -18,11 +13,12 @@
 <script>
 import { defineComponent } from "vue";
 import Header from "components/Header.vue";
+import PageContent from "components/PageContent.vue";
 
 export default defineComponent({
   name: "MainLayout",
 
-  components: { Header },
+  components: { Header, PageContent },
 
   setup() {},
 });
