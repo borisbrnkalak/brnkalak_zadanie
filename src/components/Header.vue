@@ -7,12 +7,36 @@
             <a href="#">Features</a>
             <i class="fas fa-caret-down"></i>
           </div>
+          <div class="sub-post">
+            <div class="sub-post-content">
+              <div class="first-column">
+                <h3>Contact Form</h3>
+                <p>Feel free to send us a message</p>
+              </div>
+              <div class="second-column">
+                <h3>Schedule a Live Demo</h3>
+                <p>Books a live demo with our product specialist</p>
+              </div>
+            </div>
+          </div>
         </li>
         <li class="specific-link pricing"><a href="#">Pricing</a></li>
         <li class="specific-link contact">
           <div class="arrow-text">
             <a href="#">Contact</a>
             <i class="fas fa-caret-down"></i>
+          </div>
+          <div class="sub-post">
+            <div class="sub-post-content">
+              <div class="first-column">
+                <h3>Contact Form</h3>
+                <p>Feel free to send us a message</p>
+              </div>
+              <div class="second-column">
+                <h3>Schedule a Live Demo</h3>
+                <p>Books a live demo with our product specialist</p>
+              </div>
+            </div>
           </div>
         </li>
         <li class="specific-link learn">
