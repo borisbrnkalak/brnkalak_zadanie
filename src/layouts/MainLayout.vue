@@ -5,6 +5,8 @@
         <Header />
 
         <PageContent />
+
+        <Footer />
       </div>
     </q-page-container>
   </q-layout>
@@ -14,11 +16,12 @@
 import { defineComponent } from "vue";
 import Header from "components/Header.vue";
 import PageContent from "components/PageContent.vue";
+import Footer from "components/Footer.vue";
 
 export default defineComponent({
   name: "MainLayout",
 
-  components: { Header, PageContent },
+  components: { Header, PageContent, Footer },
 
   setup() {},
 });

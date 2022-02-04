@@ -17,7 +17,75 @@
         <button class="schedule-btn">Schedule</button>
       </div>
     </div>
-    <div class="second-column"></div>
+    <div class="second-column">
+      <div class="form-title">
+        <h1>Contact Us</h1>
+        <h3>Feel free to send us a message</h3>
+      </div>
+
+      <div class="form-container card">
+        <q-form @submit="onSubmit" @reset="onReset" class="q-gutter-md">
+          <q-input
+            outlined
+            color="yellow-9"
+            label-color="gray"
+            v-model="name"
+            label="Your name *"
+            hint="Name and surname"
+            lazy-rules
+            bg-color="white"
+            :rules="[
+              (val) => (val && val.length > 0) || 'Please type something',
+            ]"
+          />
+
+          <q-input
+            outlined
+            type="email"
+            color="yellow-9"
+            label-color="gray"
+            bg-color="white"
+            v-model="email"
+            label="Your email *"
+            hint="Email"
+            lazy-rules
+            :rules="[
+              (val) => (val && val.length > 0) || 'Please type something',
+            ]"
+          />
+
+          <q-input
+            v-model="text"
+            outlined
+            color="yellow-9"
+            label-color="gray"
+            bg-color="white"
+            type="textarea"
+            label="Your message *"
+            hint="Message"
+          />
+        </q-form>
+
+        <div class="form-text">
+          <p>
+            This site is protected by reCAPTCHA and the Google
+            <a href="#">Privacy Policy</a> and
+            <a href="#">Terms of Service</a> apply
+          </p>
+        </div>
+
+        <div class="btn-container">
+          <q-btn
+            padding="10px 0"
+            no-caps
+            style="background: #f0c002; width: 100%"
+            text-color="white"
+          >
+            <div class="btn-send">Send</div>
+          </q-btn>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 

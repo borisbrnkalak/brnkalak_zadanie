@@ -181,11 +181,16 @@ body {
   text-align: center;
 }
 
+.main-content .first-column {
+  align-self: flex-end;
+}
+
 .main-content h2 {
   font-size: 42px;
   font-weight: 900;
   margin: 0 0 0.3em 0;
   line-height: 1;
+  color: $bold-text-color;
 }
 
 .main-content h3 {
@@ -194,8 +199,8 @@ body {
   margin: 0;
 }
 
-.main-content p {
-  width: 60%;
+.main-content .first-column p {
+  width: 55%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -211,9 +216,9 @@ body {
 }
 
 .main-content .schedule-link {
-  margin-top: 5em;
-  margin-bottom: 5em;
-  width: 65%;
+  margin-top: 4em;
+  margin-bottom: 4em;
+  width: 60%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -226,13 +231,113 @@ body {
   padding: 0.5em 1em;
   cursor: pointer;
   color: #4a4b41;
-  font-weight: bold;
+  font-weight: 900;
 }
 
 .card {
   padding: 4em;
   background: $components-color;
+  border-radius: 12px;
+}
+
+.main-content .second-column {
+  padding: 4em;
+}
+
+.second-column .form-title {
+  margin-bottom: 4em;
+}
+
+.second-column .form-title h1 {
+  color: $bold-text-color;
+  font-weight: 900;
+  font-size: 5em;
+  margin: 0;
+}
+
+.second-column .form-title h3 {
+  color: $yellow-color;
+  line-height: 1;
+}
+
+.second-column .form-text {
+  margin: 2em 0;
+}
+
+.second-column .form-text p {
+  width: 100%;
+  text-align: left;
+  color: $bold-text-color;
+}
+
+.second-column .form-text p a {
+  color: $yellow-color;
+  font-weight: 700;
+}
+
+.btn-send {
+  font-weight: 600;
+  font-size: 1.1em;
+}
+
+.links-wrapper {
+  background: $components-color;
+  display: flex;
+  justify-content: flex-start;
+  padding: 5em;
+  gap: 1.5em;
+}
+
+.specific-lists {
+  padding: 0;
+}
+
+.specific-links {
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
   border-radius: 8px;
+}
+
+.specific-links:hover {
+  background-color: $hover-link-color;
+}
+
+.specific-links a {
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: #85867c;
+}
+
+.main-footer .column-lists {
+  padding: 0;
+  width: 11%;
+}
+
+.main-footer .list-title {
+  margin-bottom: 1em;
+  font-size: 1.1em;
+  color: $bold-text-color;
+  font-weight: 900;
+  padding: 4px 16px;
+}
+
+.main-footer ul {
+  margin: 0;
+  list-style: none;
+}
+
+.copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.copyright p {
+  margin: 1em 0;
+  color: $copyright-text;
+  font-size: 0.9em;
 }
 
 .main-container {
