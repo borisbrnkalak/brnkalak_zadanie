@@ -23,7 +23,7 @@
       </ul>
     </div>
     <div class="copyright">
-      <p>Copyright © 2021 UXtweak Research Group. All rights reserved.</p>
+      <p>Copyright © 2022 UXtweak Research Group. All rights reserved.</p>
     </div>
   </footer>
 </template>

@@ -14,57 +14,16 @@
       </div>
       <div class="schedule-link card">
         <h2>Schedule a Live Demo</h2>
-        <button class="schedule-btn">Schedule</button>
+        <q-btn no-caps color="white" text-color="grey-7" label="Schedule" />
       </div>
     </div>
     <div class="second-column">
-      <div class="form-title">
-        <h1>Contact Us</h1>
-        <h3>Feel free to send us a message</h3>
-      </div>
-
+      <HeadingTitle
+        mainTitle="Contact us"
+        subTitle="Feel free to send us a message"
+      />
       <div class="form-container card">
-        <q-form @submit="onSubmit" @reset="onReset" class="q-gutter-md">
-          <q-input
-            outlined
-            color="yellow-9"
-            label-color="gray"
-            v-model="name"
-            label="Your name *"
-            hint="Name and surname"
-            lazy-rules
-            bg-color="white"
-            :rules="[
-              (val) => (val && val.length > 0) || 'Please type something',
-            ]"
-          />
-
-          <q-input
-            outlined
-            type="email"
-            color="yellow-9"
-            label-color="gray"
-            bg-color="white"
-            v-model="email"
-            label="Your email *"
-            hint="Email"
-            lazy-rules
-            :rules="[
-              (val) => (val && val.length > 0) || 'Please type something',
-            ]"
-          />
-
-          <q-input
-            v-model="text"
-            outlined
-            color="yellow-9"
-            label-color="gray"
-            bg-color="white"
-            type="textarea"
-            label="Your message *"
-            hint="Message"
-          />
-        </q-form>
+        <ContactForm />
 
         <div class="form-text">
           <p>
@@ -75,14 +34,7 @@
         </div>
 
         <div class="btn-container">
-          <q-btn
-            padding="10px 0"
-            no-caps
-            style="background: #f0c002; width: 100%"
-            text-color="white"
-          >
-            <div class="btn-send">Send</div>
-          </q-btn>
+          <SendButton btnContent="Send" btnColor="amber-7" />
         </div>
       </div>
     </div>
@@ -91,11 +43,14 @@
 
 <script>
 import { defineComponent } from "vue";
+import SendButton from "components/common/c-btn.vue";
+import ContactForm from "components/common/contact-form.vue";
+import HeadingTitle from "components/common/heading-title.vue";
 
 export default defineComponent({
   name: "PageContent",
 
-  components: {},
+  components: { SendButton, ContactForm, HeadingTitle },
 
   setup() {},
 });
