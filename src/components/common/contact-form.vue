@@ -1,10 +1,9 @@
 <template>
-  <q-form @submit="onSubmit" @reset="onReset" class="q-gutter-md">
+  <q-form class="q-gutter-md">
     <q-input
       outlined
       color="yellow-9"
       label-color="gray"
-      v-model="name"
       label="Your name *"
       hint="Name and surname"
       lazy-rules
@@ -18,7 +17,6 @@
       color="yellow-9"
       label-color="gray"
       bg-color="white"
-      v-model="email"
       label="Your email *"
       hint="Email"
       lazy-rules
@@ -26,7 +24,6 @@
     />
 
     <q-input
-      v-model="text"
       outlined
       color="yellow-9"
       label-color="gray"

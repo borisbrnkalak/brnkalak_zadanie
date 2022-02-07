@@ -1,8 +1,12 @@
 <template>
   <header class="main-header">
     <div class="navigation-links">
-      <div class="nav-icon" v-if="mobileView"></div>
-      <HeaderLinks v-if="!mobileView" />
+      <div class="openMenu">
+        <div :class="'menu-btn ' + (isMobile ? 'open' : '')" @click="btnMenu">
+          <div class="menu-btn__burger"></div>
+        </div>
+      </div>
+      <HeaderLinks :isMobile="isMobile" :btnMenu="btnMenu" />
     </div>
 
     <div class="login-btns">
@@ -23,7 +27,7 @@
 </template>
 
 <script>
-import { defineComponent } from "vue";
+import { defineComponent, ref } from "vue";
 import HeaderLinks from "components/common/header-links.vue";
 
 export default defineComponent({
@@ -32,9 +36,11 @@ export default defineComponent({
   components: { HeaderLinks },
 
   setup() {
-    if (window.innerWidth <= 955) {
-      console.log("aaa");
-    }
+    const isMobile = ref(false);
+    const btnMenu = () => {
+      isMobile.value = !isMobile.value;
+    };
+    return { isMobile, btnMenu };
   },
 });
 </script>

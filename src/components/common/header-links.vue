@@ -1,5 +1,8 @@
 <template>
-  <ul class="links">
+  <ul :class="'links ' + (isMobile ? 'menu-visible' : '')">
+    <div class="closeBtn" @click="btnMenu">
+      <i class="fas fa-times"></i>
+    </div>
     <HeaderLinkElement isDropdown linkContent="Features"
       ><div class="sub-post-content">
         <!--Alebo tu mozu ist ine komponenty, vlastne -->
@@ -51,7 +54,10 @@ export default defineComponent({
   name: "HeaderLinks",
 
   components: { HeaderLinkElement },
-  props: [""],
+  props: {
+    isMobile: Boolean,
+    btnMenu: Function,
+  },
 
   setup() {},
 });
