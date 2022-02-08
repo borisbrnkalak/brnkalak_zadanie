@@ -510,9 +510,10 @@ body {
   }
 
   .sub-post {
-    transform: translateX(125px);
-    top: 0;
-    left: 0;
+    bottom: unset;
+    transform: translateX(-33%);
+    padding: 1em;
+    width: 300px;
   }
 
   .closeBtn {

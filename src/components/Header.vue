@@ -37,6 +37,7 @@ export default defineComponent({
 
   setup() {
     const isMobile = ref(false);
+    const reveal = function () {};
     const btnMenu = () => {
       isMobile.value = !isMobile.value;
     };
